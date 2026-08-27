@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: white;
+        }
+
+        #dashboard {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border: none;
+
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <iframe
+        id="dashboard"
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vStYpWUTFCFPBsL1hVodUUrFQjHV387QuKhaQPLm42mM-1HrRbjZpV75wF-jpIhAIm9t3XUSC4l2c5x/pubhtml?gid=0&single=true"
+        allowfullscreen>
+    </iframe>
+
+
+    <script>
+
+        // Refresh dashboard every 10 seconds
+
+        setInterval(function () {
+
+            const dashboard =
+                document.getElementById("dashboard");
+
+            dashboard.src = dashboard.src;
+
+        }, 10 * 1000);
+
+    </script>
+
+</body>
+
+</html>
